@@ -12,9 +12,7 @@ const app = express();
 app.use(cors({credentials: true, origin: process.env.clientUrl}));
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("API is healthy");
-});
+app.get('/', (req, res) => res.send('api is healthy'))
 
 app.get('/github', async(req, res) => {
   const { code } = req.query;
